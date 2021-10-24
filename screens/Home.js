@@ -6,14 +6,16 @@ import {
 	StyleSheet,
 	ScrollView,
 } from "react-native";
-import Categories from "../components/Categories";
-import HeaderTab from "../components/HeaderTab";
+import { Divider } from "react-native-elements";
+import BottomTabs from "../components/home/BottomTabs";
+import Categories from "../components/home/Categories";
+import HeaderTab from "../components/home/HeaderTab";
 import RestaurantItems, {
 	localRestaurants,
-} from "../components/RestaurantItems";
-import SearchBar from "../components/SearchBar";
+} from "../components/home/RestaurantItems";
+import SearchBar from "../components/home/SearchBar";
 
-const Home = () => {
+const Home = ({ navigation }) => {
 	const [restaurantData, setRestaurantData] = useState(localRestaurants);
 	const [city, setCity] = useState("San Francisco");
 	const [activeTab, setActiveTab] = useState("Delivery");
@@ -52,8 +54,13 @@ const Home = () => {
 			</View>
 			<ScrollView showsVerticalScrollIndicator={false}>
 				<Categories />
-				<RestaurantItems restaurantData={restaurantData} />
+				<RestaurantItems
+					restaurantData={restaurantData}
+					navigation={navigation}
+				/>
 			</ScrollView>
+			<Divider width={1} />
+			<BottomTabs />
 		</SafeAreaView>
 	);
 };

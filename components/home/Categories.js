@@ -4,30 +4,30 @@ import { View, Text, Image, ScrollView } from "react-native";
 const items = [
 	{
 		text: "Pick-up",
-		image: require("../assets/images/shoppingBag.png"),
+		image: require("../../assets/images/shoppingBag.png"),
 	},
 	{
-		image: require("../assets/images/softDrink.png"),
+		image: require("../../assets/images/softDrink.png"),
 		text: "Soft Drinks",
 	},
 	{
-		image: require("../assets/images/bread.png"),
+		image: require("../../assets/images/bread.png"),
 		text: "Bakery Items",
 	},
 	{
-		image: require("../assets/images/fastFood.png"),
+		image: require("../../assets/images/fastFood.png"),
 		text: "Fast Foods",
 	},
 	{
-		image: require("../assets/images/deals.png"),
+		image: require("../../assets/images/deals.png"),
 		text: "Deals",
 	},
 	{
-		image: require("../assets/images/coffee.png"),
+		image: require("../../assets/images/coffee.png"),
 		text: "Coffee & Tea",
 	},
 	{
-		image: require("../assets/images/desserts.png"),
+		image: require("../../assets/images/desserts.png"),
 		text: "Desserts",
 	},
 ];
